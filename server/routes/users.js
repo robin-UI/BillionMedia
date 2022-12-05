@@ -41,4 +41,36 @@ router.delete('/deleteUser',
   controller.deleteUser
 );
 
+/* PUT : Follow user. */
+router.put('/follow',
+  fetchUser,
+  controller.followUser
+)
+
+/* PUT : UnFollow user. */
+router.delete('/unfollow',
+  fetchUser,
+  controller.unfollow
+)
+
+/* PUT : Accept Follow Request user. */
+router.put('/acceptfollowrequest',
+  fetchUser,
+  controller.acceptFollowrequest
+)
+
+/* DELETE : Reject Follow request user. */
+router.delete('/rejectfollowrequest',
+  fetchUser,
+  controller.rejectFollowRequest
+)
+
+/* DELETE : Reject Follower request user. */
+router.delete('canclefollowerrequest',
+  fetchUser,
+  controller.cancleFollowerRequest
+)
+
+
+
 module.exports = router;

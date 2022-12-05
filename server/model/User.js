@@ -33,6 +33,18 @@ const UserSchema = new Schema({
         min: 6,
         require: true,
     },
+    isPriver:{
+        type: Boolean,
+        default: false
+    },
+    followingRequest: {
+        type: Array,
+        default: [],
+    },
+    followersRequest: {
+        type: Array,
+        default: [],
+    },
     following: {
         type: Array,
         default: [],
