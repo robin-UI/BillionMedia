@@ -66,7 +66,7 @@ router.delete('/rejectfollowrequest',
 )
 
 /* DELETE : Reject Follower request user. */
-router.delete('canclefollowerrequest',
+router.delete('/canclefollowerequest',
   fetchUser,
   controller.cancleFollowerRequest
 )
