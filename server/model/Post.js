@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose;
 
 //mongoose Schema validation
-const UserSchema = new Schema({
+const PostSchema = new Schema({
     userId: {
         type: String,
         require: true,
@@ -26,5 +26,5 @@ const UserSchema = new Schema({
     { timestamps: true }
 );
 
-const User = mongoose.model('user', UserSchema);
-module.exports = User;
+const Posts = mongoose.model('posts', PostSchema);
+module.exports = Posts;
