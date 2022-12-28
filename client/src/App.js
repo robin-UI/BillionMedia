@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Login  from "./components/chat/Login";
+import Credintial from './Pages/Credintial/Credintial';
+import HomePage from './Pages/main/HomePage';
 
 function App() {
-  const [id, setId] = useState("")
-
   return (
-   <>
-   {id}
-  <Login onIdSubmit={setId} id={id} />
-   </>
+    <>
+      <Routes>
+        <Route path='=/' element={<HomePage/>} />
+        <Route path="/login" element={<Credintial/>}/>
+      </Routes>
+    </>
   );
 }
 
