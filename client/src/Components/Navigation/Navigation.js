@@ -50,25 +50,25 @@ const Navigation = () => {
                                 <GrFormSearch className='disabled' /> 
                             </div>
 
-                            <NavLink to=''>
+                            <NavLink to='/explore'>
                                 <div className="flex items-center justify-center menuIcons h-10 mb-3" style={styles}> <MdOutlineExplore/> </div>
                             </NavLink>
 
-                            <NavLink to=''>
+                            <NavLink to='/reel'>
                                 <div className="flex items-center justify-center menuIcons h-10 mb-3" style={styles}> <MdMovieCreation/> </div>
                             </NavLink>
 
-                            <NavLink to=''>
+                            <NavLink to='/message'>
                             <div className="flex items-center justify-center menuIcons h-10 mb-3" style={styles}> <FaPaperPlane/> </div>
                             </NavLink>
                             
                             <div id='notifaction' className="flex items-center justify-center menuIcons h-10 mb-3" onClick={toggleBtn} style={styles}> <AiOutlineHeart className='disabled'/> </div>
                             
-                            <NavLink to=''>
+                            <NavLink to='/create'>
                             <div className="flex items-center justify-center menuIcons h-10 mb-3" style={styles}> <MdOutlineAddBox/> </div>
                             </NavLink>
 
-                            <NavLink to=''>
+                            <NavLink to='/profile'>
                             <div className="flex mb-3 items-center menuIcons  h-10 w-10"> <img src={profile} alt="profile-pic" className='rounded-full' /> </div>
                             </NavLink>
 
@@ -81,7 +81,7 @@ const Navigation = () => {
                             <div className={`  items-center cursor-pointer ${toggle ? "h-8 mb-6" : "disnon h-0"}`}>
                                 <h3>instagram</h3>
                             </div>
-                            <NavLink to=''>
+                            <NavLink to='/'>
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Home</p>
                             </div>
@@ -91,19 +91,19 @@ const Navigation = () => {
                                 <p className='ml-3'>Search</p>
                             </div>
 
-                            <NavLink>
+                            <NavLink to='/explore'>
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Expore</p>
                             </div>
                             </NavLink>
 
-                            <NavLink>
+                            <NavLink to="/reel">
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Reels</p>
                             </div>
                             </NavLink>
 
-                            <NavLink>
+                            <NavLink to='/message'>
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Message</p>
                             </div>
@@ -113,13 +113,13 @@ const Navigation = () => {
                                 <p className='ml-3'>Notification</p>
                             </div>
 
-                            <NavLink>
+                            <NavLink to="/create">
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Create</p>
                             </div>
                             </NavLink>
 
-                            <NavLink>
+                            <NavLink to="/profile">
                             <div className='h-10 flex items-center cursor-pointer mb-3'>
                                 <p className='ml-3'>Profile</p>
                             </div>
