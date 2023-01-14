@@ -1,6 +1,12 @@
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 5% auto;
+  max-width: 100%;
+  background-color: rgb(14, 14, 14);
+  padding: 50px;
+  padding-top: 10%;
+  padding-left: 35%;
 }
 
 a {

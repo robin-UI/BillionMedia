@@ -3,8 +3,16 @@ import HomePage from "../Pages/main/HomePage";
 
 function AuthRout() {
 
-    const isLogedin = localStorage.getItem("adminInfo");
-    return isLogedin ? <HomePage/> : <Navigate to="/login" />;
+    const isLogedin = false;
+    // if (isLogedin) {
+    //     return <HomePage />
+    // } else {
+    //     return (
+    //         // <Credintial />
+    //         <Navigate to="login" /> 
+    //     )
+    // }
+    return isLogedin ? <HomePage /> : <Navigate to="/login" />;
 
 }
 
