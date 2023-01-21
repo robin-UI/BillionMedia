@@ -35,7 +35,7 @@ const Navigation = () => {
         <>
             <div className="h-full flex flex-col justify-between ">
                 <div className="">
-                    <div className="flex relative">
+                    <div className="flex relative ">
                         <div className="iconField mr-3">
                             <IconContext.Provider value={{ size: "20", className: "menuIcons" }}>
                             <NavLink to='/'> 

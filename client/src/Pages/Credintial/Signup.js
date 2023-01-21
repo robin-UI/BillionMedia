@@ -28,6 +28,8 @@ const Signup = () => {
             }) 
             .then((response) => {
                 console.log(response);
+                localStorage.setItem('tocken', response.data.authTocken);
+                console.log(localStorage);
             })
             .catch(err => {
                 console.log(err);

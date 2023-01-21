@@ -9,6 +9,10 @@ import Create from '../Pages/Create/Create'
 import AuthRout from '../ProtectedRout/AuthRout'
 import Login  from '../Pages/Credintial/Login'
 import Signup from '../Pages/Credintial/Signup'
+import Posts from '../Components/Profile/Posts'
+import Saved from '../Components/Profile/Saved'
+import { Rreels } from '../Components/Profile/Rreels'
+import Tagged from '../Components/Profile/Tagged'
 
 function AppRoute() {
 
@@ -25,7 +29,12 @@ function AppRoute() {
                     <Route path='reel' element={<Reels />} />
                     <Route path='message' element={<Message />} />
                     <Route path='create' element={<Create />} />
-                    <Route path='profile' element={<Profiles />} />
+                    <Route path='profile' element={<Profiles />} >
+                        <Route index element={<Posts/>} />
+                        <Route path='saved' element={<Saved/>} />
+                        <Route path='reels' element={<Rreels/>} />
+                        <Route path='tagged' element={<Tagged/>} />
+                    </Route>
                 </Route>
             </Routes>
         </>

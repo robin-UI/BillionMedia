@@ -15,7 +15,7 @@ const Post = () => {
     }
     return (
         <>
-            <div className="p-7 mb-4 bg-slate-300 mr-4">
+            <div className="p-7 mb-4 bg-slate-300 mr-4 w-screen md:w-auto">
                 <div className="mb-3 flex justify-between">
                     <div className="flex items-center">
                         <div className="mr-2 h-10 w-10 ">
