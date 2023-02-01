@@ -85,10 +85,10 @@ module.exports = {
 
     showUserDetails: async (req, res) => {
         try {
-            userId = req.user.id;
+            let userId = req.params.id;
             const user = await User.findById(userId).select("-passwords");
             const { password, updatedAt, ...other } = user._doc;
-            res.send(other)
+            res.status(200).send(other);
         } catch (error) {
             console.error(error.message)
             res.status(500).send("Some error this occured")

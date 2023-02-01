@@ -1,11 +1,14 @@
 import  './topbar.css'
 import { RxMagnifyingGlass, RxPerson, RxChatBubble, RxBell } from "react-icons/rx"
+import { Link } from 'react-router-dom'
 
 export const Topbara = () => {
   return (
     <div className='topbarConntainer'>
         <div className="toopbarLeft">
-            <span className="logo">Facebook</span>
+            <Link to='/' style={{textDecoration: "none"}}>
+                <span className="logo" >Facebook</span>
+            </Link>
         </div>
         <div className="toopbarCenter">
             <div className="searchbar">

@@ -1,7 +1,9 @@
 const Post = require("../model/Post");
+const User = require("../model/User")
 
 module.exports = {
     createPost : async (req, res) => {
+        console.log(req.files);
         const newPost = new Post(req.body);
         try {
             const savedPost = await newPost.save();
@@ -65,14 +67,15 @@ module.exports = {
 
     showAllPost : async (req, res) => {
         try {
-            const currentUser = await User.findById(req.body.userId);
+            const currentUser = await User.findById(req.params.userId);
+            
             const userPosts = await Post.find({ userId: currentUser._id });
             const friendPosts = await Promise.all(
-                currentUser.followings.map((friendId) => {
+                currentUser.following.map((friendId) => {
                     return Post.find({ userId: friendId });
                 })
             );
-            res.json(userPosts.concat(...friendPosts))
+            res.status(200).json(userPosts.concat(...friendPosts)) 
         } catch (err) {
             res.status(500).json(err);
         }

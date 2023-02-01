@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controller/postController');
-const { fetchUser } = require('../middleware/fetchUser')
+const { uploadPhoto, postImgResize } = require('../middleware/uploadImages');
+// const { fetchUser } = require('../middleware/fetchUser')
 
 //create a post
 router.post(
     "/newPost", 
-    fetchUser,
+    uploadPhoto.array("images", 10),
+    postImgResize,
     controller.createPost,
 );
 
@@ -36,7 +38,7 @@ router.get(
 
 //get timeline posts
 router.get(
-    "/timeline/all",
+    "/timeline/:userId",
     controller.showAllPost
 );
 

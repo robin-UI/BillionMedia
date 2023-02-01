@@ -7,6 +7,10 @@ const PostSchema = new Schema({
         type: String,
         require: true,
     },
+    image: {
+        type: String,
+        require: true
+    },
     description: {
         type: String,
         min: 3,
@@ -16,10 +20,6 @@ const PostSchema = new Schema({
     likes: {
         type: Array,
         default: [],
-    },
-    posts: {
-        type: String,
-        default: '',
     },
 
 },

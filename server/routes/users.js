@@ -24,8 +24,8 @@ router.post('/login',
 )
 
 /* POST : Fetch user. */
-router.get('/fetchUser/',
-  fetchUser,
+router.get('/fetchUser/:id',
+  // fetchUser,
   controller.showUserDetails
 )
 
